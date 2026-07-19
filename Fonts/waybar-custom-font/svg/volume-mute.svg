@@ -1,0 +1,21 @@
+<svg viewBox="0 0 640 640" fill="none" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <style>
+        :root, .palette0 {color: currentColor;
+            --color0: #fff;
+            --color1: #8f8f8f;
+            --color2: #cd1313;
+            --color3: #29df3b;
+            --color4: #e51515;
+        }
+    </style>
+    <g fill="var(--color0, #fff)" clip-path="url(#volume_mute_clip0_1_2)">
+        <path d="M317.2 96c19.2 1e-4 34.8 15.6 34.8 34.8v378.4c0 19.2-15.6 34.8-34.8 34.8-8.5 0-16.7-3.1-23.1-8.8L160 416h-48c-26.5 0-48-21.5-48-48v-96c0-26.5 21.5-48 48-48h48l134.1-119.2c6.4-5.7002 14.6-8.8 23.1-8.8z" />
+        <rect transform="rotate(-40 360 212.565)" width="88" height="353.259" rx="38" x="360" y="212.565" />
+        <rect transform="rotate(40 587.071 156)" width="88" height="353.259" rx="38" x="587.071" y="156" />
+    </g>
+    <defs>
+        <clipPath id="volume_mute_clip0_1_2">
+            <rect fill="#fff" width="640" height="640" />
+        </clipPath>
+    </defs>
+</svg>

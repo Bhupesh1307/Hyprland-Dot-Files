@@ -1,0 +1,106 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+
+    "modules-left": [
+        "hyprland/workspaces",
+	"hyprland/window"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "network",
+        "group/system",
+        "custom/notifications"
+    ],
+
+    "group/system": {
+        "orientation": "inherit",
+        "modules": [
+            "pulseaudio",
+            "battery"
+        ]
+    },
+
+    "custom/notifications": {
+        "format": "\uf0e0",
+        "tooltip-format": "Notification Center",
+        "on-click": "swaync-client -t"
+    },
+
+    "hyprland/workspaces": {
+        "format": ""
+    },
+
+    "hyprland/window": {
+	"format": "{}",
+	"empty": "",
+	"max-length": 35,
+	"separate-outputs": true
+    },
+
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "tooltip-format": "{:%A, %d %B %Y}"
+    },
+
+    "network": {
+        "format-wifi": "{icon}  {essid}",
+        "format-ethernet": "\uf0a5",
+        "format-disconnected": "\uf0a0",
+
+        "format-icons": [
+    "\uf0a1",
+    "\uf0a2",
+    "\uf0a3",
+    "\uf0a4"
+],
+
+        "tooltip-format-wifi": "Connected to {essid}",
+        "tooltip-format-ethernet": "Ethernet",
+        "tooltip-format-disconnected": "No network connection",
+
+        "on-click": "nm-connection-editor"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "\uf0b0",
+
+        "format-icons": {
+            "headphone": "\uf0b4",
+            "default": [
+                "\uf0b1",
+                "\uf0b2",
+                "\uf0b3"
+            ]
+        },
+
+        "tooltip-format": "{desc}\nVolume: {volume}%",
+
+        "on-click": "pavucontrol"
+    },
+
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-charging": "\uf0d1 {capacity}%",
+
+        "format-icons": [
+            "\uf0c0",
+            "\uf0c1",
+            "\uf0c2",
+            "\uf0c3",
+            "\uf0c4",
+            "\uf0c5",
+	    "\uf0c6",
+	    "\uf0c7",
+	    "\uf0c8",
+	    "\uf0c9",
+	    "\uf0d0"
+        ]
+    }
+}

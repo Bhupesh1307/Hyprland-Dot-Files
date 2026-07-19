@@ -1,0 +1,13 @@
+require("modules/variables")
+require("modules/env")
+require("modules/autostart")
+require("modules/general")
+require("modules.monitors")
+require("modules/animations")
+require("modules/input")
+require("modules/workspaces")
+require("modules/rules")
+require("modules/keybinds")
+
+-- HyprMod managed settings
+require("hyprland-gui")

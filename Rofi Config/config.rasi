@@ -1,0 +1,169 @@
+/* Global configuration */
+* {
+    font:		"Roboto 14";
+}
+
+/* Configuration */
+configuration {
+    modi:		"drun";
+    show-icons:		true;
+    display-drun:	"";
+    display-format: 	"{name}";
+    kb-cancel: 		[ Escape, MousePrimary ];
+    me-select-entry:	"";
+    me-accept-entry:	"MousePrimary";
+}
+
+/* Main Window */
+window {
+    transparency:	"real";
+    location:		center;
+    anchor:		center;
+    fullscreen:		false;
+    width:		550px;
+    x-offset:		0px;
+    y-offset:		0px;
+    
+    enabled:		true;
+    margin:		0px;
+    padding:		0px;
+    border:		0px solid;
+    border-radius:	12px;
+    background-color:	#1E212780;
+    cursor:		default;
+}
+
+/* Main Box */
+mainbox {
+    enabled:		true;
+    spacing:		18px;
+    margin:		0px;
+    padding:		20px;
+    border:		0px solid;
+    border-radius:	0px;
+    background-color:	transparent;
+    children: 		[ "inputbar", "listview" ];
+}
+
+/* Inputbar */
+inputbar {
+    enabled: 		true;
+    spacing:		10px;
+    margin:		0px;
+    padding:		15px;
+    border:		0px 0px 1px 0px solid;
+    border-radius:	12px;
+    border-color:	#61AFEFFF;
+    background-color:	#282B3199;
+    text-color:		#FFFFFFFF;
+    children:		[ "prompt", "entry" ];
+}
+
+prompt {
+    enabled:		true;
+    font: 		"JetBrainsMono Nerd Font 13";
+    background-color:	transparent;		
+    text-color:		inherit;
+    vertical-align:	0.35;
+}
+
+textbox-prompt-colon {
+    enabled:		true;
+    expand:		false;
+    str:		"::";
+    background-color:	inherit;
+    text-color:		inherit;
+}
+
+entry {
+    enabled:		true;
+    background-color:	transparent;
+    text-color:		inherit;
+    cursor:		text;
+    placeholder:	"Search apps";
+    placeholder-color:	#A3A3A3;
+}
+
+/* Listview */
+listview {
+    enabled:		true;
+    columns:		1;
+    lines:		6;
+    cycle:		false;
+    dynamic:		true;
+    scrollbar:		false;
+    layout:		vertical;
+    reverse:		false;
+    fixed-height:	true;
+    fixed-columns:	true;
+
+    spacing:		5px;
+    margin:		0px;
+    padding:		0px;
+    border:		0px solid;
+    border-radius:	0px;
+    background-color:	transparent;
+    text-color:		#FFFFFF;
+    cursor:		default;
+}
+
+/* Element */
+element {
+    enabled:		true;
+    spacing:		10px;
+    margin:		0px;
+    padding:		8px;
+    border:		0px solid;
+    border-radius:	12px;
+    background-color:	transparent;
+    text-color:		#FFFFFF;
+    cursor:		pointer;
+}
+
+element normal.normal {
+    background-color:	transparent;
+    text-color:		#FFFFFF;
+}
+
+element alternate.normal {
+    background-color: 	transparent;
+    text-color:		#FFFFFF;
+}
+
+element selected.normal {
+    background-color:	#282B31FF;
+    text-color: #FFFFFF;
+}
+
+element-icon {
+    background-color:	transparent;
+    size:		32px;
+    cursor:		inherit;
+}
+
+element-text {
+    background-color:	transparent;
+    text-color:		inherit;
+    highlight:		inherit;
+    cursor:		inherit;
+    vertical-align:	0.5;
+    horizontal-align:	0.0;
+}
+
+/* Message */
+
+error-message {
+    padding:                     15px;
+    border:                      2px solid;
+    border-radius:               12px;
+    border-color:                #61AFEFFF;
+    background-color:            #1E2127FF;
+    text-color:                  #FFFFFF;
+}
+textbox {
+    background-color:            #1E2127FF;
+    text-color:                  #FFFFFF;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    highlight:                   none;
+}
