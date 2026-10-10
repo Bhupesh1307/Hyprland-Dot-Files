@@ -1,0 +1,20 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+parse_git_branch() {
+    local branch
+    branch=$(git branch --show-current 2>/dev/null)
+
+    if [[ -n "$branch" ]]; then
+        echo " $branch"
+    fi
+}
+
+PS1='\n \w$(parse_git_branch) \n ❯ '
