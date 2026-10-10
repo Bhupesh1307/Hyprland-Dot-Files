@@ -1,6 +1,6 @@
 hl.env("XCURSOR_THEME", "Bibata-Modern-Ice")
-hl.env("XCURSOR_SIZE", "28")
-hl.env("HYPRCURSOR_SIZE", "28")
+hl.env("XCURSOR_SIZE", "30")
+hl.env("HYPRCURSOR_SIZE", "30")
 
 hl.env("GDK_BACKEND", "wayland,x11,*")
 hl.env("QT_QPA_PLATFORM", "wayland;xcb")

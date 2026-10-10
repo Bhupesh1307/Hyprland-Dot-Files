@@ -16,6 +16,9 @@ hl.bind(mainMod .. " + M",
 hl.bind(mainMod .. " + N",
     hl.dsp.exec_cmd("swaync-client -t"))
 
+hl.bind(mainMod .. " + F",
+    hl.dsp.window.fullscreen({ action = "toggle" }))
+
 hl.bind(mainMod .. " + SPACE",
     hl.dsp.exec_cmd("pkill -x rofi || rofi -show drun"))
 
@@ -101,4 +104,3 @@ hl.bind(mainMod .. " + mouse:272",
 hl.bind(mainMod .. " + mouse:273",
     hl.dsp.window.resize(),
     { mouse = true })
-
