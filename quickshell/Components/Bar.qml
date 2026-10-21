@@ -1,6 +1,8 @@
 import Quickshell
 import Quickshell.Wayland
 import QtQuick
+import "Clock"
+import "Status"
 
 PanelWindow {
     id: bar
@@ -38,7 +40,7 @@ PanelWindow {
     ClockPopup {
         id: clockPopup
 
-        visible: clock.popupOpen
+        open: clock.popupOpen
 
         onDismissed: {
             clock.popupOpen = false
@@ -50,8 +52,21 @@ PanelWindow {
 
     Status {
         id: status
-        
+
         anchors.right: parent.right
         anchors.rightMargin: 10
+    }
+
+    StatusPopup {
+        id: statusPopup
+
+        open: status.popupOpen
+
+        onDismissed: {
+            status.popupOpen = false
+        }
+
+        anchorWindow: bar
+        targetItem: status
     }
 }

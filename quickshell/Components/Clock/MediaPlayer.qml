@@ -34,9 +34,9 @@ Rectangle {
         }
     }
 
-    color: '#252527'
+    color: '#0f0f0f'
     border.width: 1
-    border.color: "#3A3A3C"
+    border.color: '#2d2d2d'
     
     radius: 25
 

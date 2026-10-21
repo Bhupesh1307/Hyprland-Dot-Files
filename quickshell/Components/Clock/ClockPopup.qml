@@ -2,24 +2,15 @@ import Quickshell
 import Quickshell.Widgets
 import QtQuick
 import QtQuick.Layouts
+import ".."
 
 Popup {
     id: clockPopup
-
-    signal dismissed()
 
     implicitWidth: 800
     implicitHeight: 500
 
     anchor.rect.x: (anchorWindow.width - clockPopup.width) / 2
-
-    grabFocus: true
-
-    onVisibleChanged: {
-        if (!visible) {
-            dismissed()
-        }
-    }
 
     RowLayout {
         anchors.fill: parent
@@ -29,7 +20,7 @@ Popup {
 
         MediaPlayer {
             Layout.fillWidth: true
-            height: parent.height
+            Layout.fillHeight: true
         }
 
         ColumnLayout {

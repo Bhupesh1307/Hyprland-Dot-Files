@@ -1,10 +1,11 @@
 import Quickshell
 import QtQuick
+import ".."
 
 Pill {
     id: clockPill
 
-    property var popupOpen: false
+    property bool popupOpen: false
 
     anchors.verticalCenter: parent.verticalCenter
 

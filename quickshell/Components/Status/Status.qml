@@ -1,8 +1,11 @@
 import Quickshell
 import QtQuick
+import ".."
 
 Pill {
     id: status
+
+    property bool popupOpen: false
 
     anchors.verticalCenter: parent.verticalCenter
 
@@ -31,6 +34,14 @@ Pill {
             id: batteryStatus
 
             anchors.verticalCenter: parent.verticalCenter
+        }
+    }
+
+    MouseArea {
+        anchors.fill: parent
+        
+        onClicked: {
+            popupOpen = !popupOpen
         }
     }
 }

@@ -28,7 +28,6 @@ Item {
             return
         }
 
-        wifiDevice.scannerEnabled = true
         connectedNetwork = null
 
         for (const network of wifiDevice.networks.values) {
@@ -48,7 +47,7 @@ Item {
             return "android_wifi_3_bar_off"
         }
 
-        if (connectedNetwork.signalStrength >= 3.75) {
+        if (connectedNetwork.signalStrength >= 0.75) {
             return "android_wifi_4_bar"
         } else if (connectedNetwork.signalStrength >= 0.50) {
             return "android_wifi_3_bar"
@@ -81,6 +80,10 @@ Item {
         function onValuesChanged() {
             updateWifi()
         }
+    }
+
+    Component.onCompleted: {
+        updateWifi()
     }
 
     Text {

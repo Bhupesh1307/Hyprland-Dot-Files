@@ -6,5 +6,5 @@ Rectangle {
         height: 35
 
         radius: height / 2
-        color: "#202124"
+        color: "#000000"
     }
