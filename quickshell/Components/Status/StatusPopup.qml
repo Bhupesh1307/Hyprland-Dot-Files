@@ -18,12 +18,11 @@ Popup {
 
         RowLayout {
             ColumnLayout {
-                ToggleTile {
+                Tile {
                     Layout.fillWidth: true
                     Layout.preferredHeight: 95
                 }
-
-                ToggleTile {
+                Tile {
                     Layout.fillWidth: true
                     Layout.preferredHeight: 95
                 }

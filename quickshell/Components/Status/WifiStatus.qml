@@ -4,38 +4,24 @@ import QtQuick
 Item {
     id: wifiStatus
 
-    property var wifiDevice: null
-    property var connectedNetwork: null
-
-    width: wifiIcon.implicitWidth
-    height: wifiIcon.implicitHeight
-
-    function findWifiDevice() {
+    readonly property var wifiDevice: {
         for (const device of Networking.devices.values) {
             if (device.type === DeviceType.Wifi) {
                 return device
             }
         }
-
         return null
     }
-
-    function updateWifi() {
-        wifiDevice = findWifiDevice()
-
+    property var connectedNetwork: {
         if (!wifiDevice) {
-            connectedNetwork = null
-            return
+            return null
         }
-
-        connectedNetwork = null
-
         for (const network of wifiDevice.networks.values) {
             if (network.connected) {
-                connectedNetwork = network
-                break
+                return network
             }
         }
+        return null
     }
 
     function wifiIconName() {
@@ -52,39 +38,14 @@ Item {
         } else if (connectedNetwork.signalStrength >= 0.50) {
             return "android_wifi_3_bar"
         } else if (connectedNetwork.signalStrength >= 0.25) {
-                return "android_wifi_3_bar_alert"
+                return "wifi_2_bar"
         } else {
             return "android_wifi_3_bar_question"
         }
     }
 
-    Connections {
-        target: Networking.devices
-
-        function onValuesChanged() {
-            updateWifi()
-        }
-    }
-
-    Connections {
-        target: wifiDevice
-
-        function onConnectedChanged() {
-            updateWifi()
-        }
-    }
-
-    Connections {
-        target: wifiDevice ? wifiDevice.networks : null
-
-        function onValuesChanged() {
-            updateWifi()
-        }
-    }
-
-    Component.onCompleted: {
-        updateWifi()
-    }
+    width: wifiIcon.implicitWidth
+    height: wifiIcon.implicitHeight
 
     Text {
         id: wifiIcon
@@ -92,7 +53,7 @@ Item {
         text: wifiIconName()
 
         color: {
-            if (!connectedNetwork) {
+            if (!wifiStatus.connectedNetwork) {
                 return "#777777"
             } else {
                 return "#ffffff"

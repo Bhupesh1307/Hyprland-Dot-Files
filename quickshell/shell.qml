@@ -4,4 +4,5 @@ import "Components"
 
 ShellRoot {
     Bar {}
+    WallpaperSwitcher {}
 }
