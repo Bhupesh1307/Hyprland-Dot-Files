@@ -1,0 +1,14 @@
+{
+    "name": "Ayu Mirage",
+    "bg": "#1F2430",
+    "surface": "#242936",
+    "border": "#3D465A",
+    "text": "#CBCCC6",
+    "subtext": "#A6A69C",
+    "primary": "#FFCC66",
+    "secondary": "#5CCFE6",
+    "red": "#F28779",
+    "green": "#BAE67E",
+    "yellow": "#FFD580",
+    "blue": "#73D0FF"
+}

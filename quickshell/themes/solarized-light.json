@@ -1,0 +1,14 @@
+{
+    "name": "Solarized Light",
+    "bg": "#FDF6E3",
+    "surface": "#EEE8D5",
+    "border": "#D6CFB9",
+    "text": "#586E75",
+    "subtext": "#657B83",
+    "primary": "#268BD2",
+    "secondary": "#6C71C4",
+    "red": "#DC322F",
+    "green": "#859900",
+    "yellow": "#B58900",
+    "blue": "#268BD2"
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Kanagawa Lotus",
+    "bg": "#F2ECBC",
+    "surface": "#E7DDB0",
+    "border": "#C9C0A6",
+    "text": "#545464",
+    "subtext": "#716E78",
+    "primary": "#4D699B",
+    "secondary": "#B35B79",
+    "red": "#C84053",
+    "green": "#6F894E",
+    "yellow": "#77713F",
+    "blue": "#4D699B"
+}

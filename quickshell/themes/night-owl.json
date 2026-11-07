@@ -1,0 +1,14 @@
+{
+    "name": "Night Owl",
+    "bg": "#011627",
+    "surface": "#0B2942",
+    "border": "#234D70",
+    "text": "#D6DEEB",
+    "subtext": "#8DABC9",
+    "primary": "#82AAFF",
+    "secondary": "#C792EA",
+    "red": "#EF5350",
+    "green": "#22DA6E",
+    "yellow": "#ADDB67",
+    "blue": "#82AAFF"
+}

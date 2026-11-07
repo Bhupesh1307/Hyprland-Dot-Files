@@ -1,0 +1,14 @@
+{
+    "name": "Everforest Dark",
+    "bg": "#2D353B",
+    "surface": "#343F44",
+    "border": "#475258",
+    "text": "#D3C6AA",
+    "subtext": "#9DA9A0",
+    "primary": "#A7C080",
+    "secondary": "#7FBBB3",
+    "red": "#E67E80",
+    "green": "#A7C080",
+    "yellow": "#DBBC7F",
+    "blue": "#7FBBB3"
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Gruvbox Light",
+    "bg": "#FBF1C7",
+    "surface": "#F2E5BC",
+    "border": "#D5C4A1",
+    "text": "#3C3836",
+    "subtext": "#7C6F64",
+    "primary": "#B57614",
+    "secondary": "#076678",
+    "red": "#CC241D",
+    "green": "#79740E",
+    "yellow": "#B57614",
+    "blue": "#076678"
+}

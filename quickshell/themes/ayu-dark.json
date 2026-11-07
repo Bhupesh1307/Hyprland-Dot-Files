@@ -1,0 +1,14 @@
+{
+    "name": "Ayu Dark",
+    "bg": "#0B0E14",
+    "surface": "#151A22",
+    "border": "#273747",
+    "text": "#BFBDB6",
+    "subtext": "#8A9199",
+    "primary": "#E6B450",
+    "secondary": "#59C2FF",
+    "red": "#D95757",
+    "green": "#7FD962",
+    "yellow": "#E6B450",
+    "blue": "#59C2FF"
+}

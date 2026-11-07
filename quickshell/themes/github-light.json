@@ -1,0 +1,14 @@
+{
+    "name": "GitHub Light",
+    "bg": "#FFFFFF",
+    "surface": "#F6F8FA",
+    "border": "#D0D7DE",
+    "text": "#1F2328",
+    "subtext": "#656D76",
+    "primary": "#0969DA",
+    "secondary": "#8250DF",
+    "red": "#CF222E",
+    "green": "#1A7F37",
+    "yellow": "#9A6700",
+    "blue": "#0969DA"
+}

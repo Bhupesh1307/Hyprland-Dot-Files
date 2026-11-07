@@ -5,4 +5,5 @@ import "Components"
 ShellRoot {
     Bar {}
     WallpaperSwitcher {}
+    ThemePicker {}
 }

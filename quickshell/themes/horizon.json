@@ -1,0 +1,14 @@
+{
+    "name": "Horizon",
+    "bg": "#1C1E26",
+    "surface": "#232530",
+    "border": "#3B3E4A",
+    "text": "#D5D8DA",
+    "subtext": "#A0A3B1",
+    "primary": "#E95678",
+    "secondary": "#B877DB",
+    "red": "#E95678",
+    "green": "#09F7A0",
+    "yellow": "#FAB795",
+    "blue": "#25B0BC"
+}

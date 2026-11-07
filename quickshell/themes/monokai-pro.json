@@ -1,0 +1,14 @@
+{
+    "name": "Monokai Pro",
+    "bg": "#2D2A2E",
+    "surface": "#403E41",
+    "border": "#5B595C",
+    "text": "#FCFCFA",
+    "subtext": "#C1C0C0",
+    "primary": "#FFD866",
+    "secondary": "#AB9DF2",
+    "red": "#FF6188",
+    "green": "#A9DC76",
+    "yellow": "#FFD866",
+    "blue": "#78DCE8"
+}

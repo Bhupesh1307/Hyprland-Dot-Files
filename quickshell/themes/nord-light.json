@@ -1,0 +1,14 @@
+{
+    "name": "Nord Light",
+    "bg": "#ECEFF4",
+    "surface": "#E5E9F0",
+    "border": "#D8DEE9",
+    "text": "#2E3440",
+    "subtext": "#4C566A",
+    "primary": "#5E81AC",
+    "secondary": "#81A1C1",
+    "red": "#BF616A",
+    "green": "#A3BE8C",
+    "yellow": "#EBCB8B",
+    "blue": "#5E81AC"
+}

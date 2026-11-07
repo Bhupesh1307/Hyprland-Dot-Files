@@ -1,0 +1,14 @@
+{
+  "name": "Catppuccin Mocha",
+  "bg": "#1e1e2e",
+  "surface": "#313244",
+  "border": "#45475a",
+  "text": "#cdd6f4",
+  "subtext": "#a6adc8",
+  "primary": "#cba6f7",
+  "secondary": "#b4befe",
+  "red": "#f38ba8",
+  "green": "#a6e3a1",
+  "yellow": "#f9e2af",
+  "blue": "#89b4fa"
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Ayu Light",
+    "bg": "#FAFAFA",
+    "surface": "#F3F4F5",
+    "border": "#D9DADF",
+    "text": "#5C6166",
+    "subtext": "#828C99",
+    "primary": "#FF9940",
+    "secondary": "#399EE6",
+    "red": "#F07171",
+    "green": "#86B300",
+    "yellow": "#F2AE49",
+    "blue": "#399EE6"
+}

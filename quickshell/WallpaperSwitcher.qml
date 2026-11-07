@@ -3,6 +3,7 @@ pragma ComponentBehavior: Bound
 import Quickshell
 import Quickshell.Io
 import Quickshell.Wayland
+import Quickshell.Widgets
 import QtQuick
 import Qt.labs.folderlistmodel
 
@@ -12,11 +13,11 @@ Scope {
     property string wallDir: Quickshell.env("HOME") + "/Pictures/Wallpapers"
     property bool useMatugen: false
     property string transition: "grow"
-    property bool open: false
+    readonly property bool open: Pickers.active === "wallpaper"
 
     IpcHandler {
         target: "wallpaper"
-        function toggle(): void { root.open = !root.open }
+        function toggle(): void { Pickers.toggle("wallpaper") }
     }
 
     Process {
@@ -30,7 +31,7 @@ Scope {
     function apply(path): void {
             awwwProcess.command = ["awww", "img", path, "--transition-type", root.transition]
             awwwProcess.running = true
-            root.open = false
+            Pickers.toggle("wallpaper")
         }
     
     function save(path): void {
@@ -40,7 +41,7 @@ Scope {
 
     PanelWindow {
         visible: root.open
-        onVisibleChanged: panel.shown = !panel.shown
+        onVisibleChanged: panel.shown = visible
         anchors { top: true; bottom: true; left: true; right: true }
         exclusionMode: ExclusionMode.Ignore
         WlrLayershell.layer: WlrLayer.Overlay
@@ -54,7 +55,10 @@ Scope {
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    root.open = false
+                    if (imgContainer.PathView.isCurrentItem)
+                        root.apply(imgContainer.filePath)
+                    else
+                        imgContainer.PathView.view.currentIndex = imgContainer.index
                 }
             }
 
@@ -68,7 +72,7 @@ Scope {
             Rectangle {
                 id: panel
                 property bool shown: false
-                width: 700
+                width: 860
                 height: 200
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.bottom: parent.bottom
@@ -77,7 +81,9 @@ Scope {
                     NumberAnimation { duration: 300; easing.type: Easing.OutCubic }
                 }
                 radius: 20
-                color: "#0f0f0f"
+                color: Theme.bg
+                border.width: 1
+                border.color: Theme.border
 
                 MouseArea {
                     anchors.fill: parent
@@ -92,7 +98,7 @@ Scope {
                     clip: true
                     model: walls
 
-                    readonly property int itemW: 280
+                    readonly property int itemW: 240
                     readonly property int step: itemW + 12            
                     pathItemCount: 5                                  
                     readonly property real pathLen: step * pathItemCount
@@ -113,7 +119,7 @@ Scope {
 
                     Keys.onLeftPressed: decrementCurrentIndex()
                     Keys.onRightPressed: incrementCurrentIndex()
-                    Keys.onEscapePressed: root.open = false
+                    Keys.onEscapePressed: Pickers.toggle("wallpaper")
                     Keys.onReturnPressed: {
                         if (currentItem) {
                             root.apply(currentItem.filePath)
@@ -129,12 +135,18 @@ Scope {
                         width: list.itemW
                         height: list.height
                         
-                        Image {
+                        ClippingRectangle {
                             anchors.fill: parent
-                            source: "file://" + imgContainer.filePath
-                            fillMode: Image.PreserveAspectCrop
-                            sourceSize.width: 440
-                            asynchronous: true
+                            radius: 20
+                            color: "transparent"
+
+                            Image {
+                                anchors.fill: parent
+                                source: "file://" + imgContainer.filePath
+                                fillMode: Image.PreserveAspectCrop
+                                sourceSize.width: 440
+                                asynchronous: true
+                            }
                         }
 
                         MouseArea {
@@ -153,8 +165,9 @@ Scope {
                     color: "transparent"
                     width: list.itemW
                     height: list.height
+                    radius: 20
                     border.width: 3
-                    border.color: "#ffffff"
+                    border.color: Theme.primary
                 }
             }
         }
